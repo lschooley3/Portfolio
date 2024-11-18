@@ -1,4 +1,4 @@
-
+import Button from "react-bootstrap/Button";
 
 export const Contact = () => {
   return (
@@ -29,7 +29,7 @@ export const Contact = () => {
             rows={3}
           />
         </div>
-        <button type="submit">Send</button>
+        <Button as="input" type="submit" value="Send" />
       </form>
     </div>
     </div>

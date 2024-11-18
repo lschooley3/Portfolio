@@ -1,27 +1,33 @@
-
-
 export const AboutMe = () => {
   return (
     <div className="container">
-      <h1 className="display-1">About Me
+      <h1 className="display-1">
+        About Me
         <small className="text-muted"> - Laura Schooley</small>
       </h1>
 
       <div className="flex-container">
-        <img src="https://via.placeholder.com/150" alt="placeholder" className="flex-item"/>
+        <img
+          src="https://via.placeholder.com/150"
+          alt="placeholder"
+          className="flex-item"
+        />
         <div className="flex-item container">
-          <p className="mb-2"> 
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet
-            pariatur aliquid quisquam perferendis natus ad dicta fugit, error
-            vero obcaecati odio voluptatem earum ducimus fuga, tempora animi
-            recusandae totam qui!
+          <p className="mb-2">
+            Hi there! I’m Laura, a web developer based in Kansas City, making an
+            exciting career shift from teaching high school mathematics for 9
+            years after majoring in mathematics. I’m currently deep into a
+            coding bootcamp through the University of Kansas, where I’ve been
+            building my skills in Node.js, TypeScript, PostgreSQL, GraphQL, and
+            basic Python over the past 6 months.
           </p>
-          
+
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet
-            pariatur aliquid quisquam perferendis natus ad dicta fugit, error
-            vero obcaecati odio voluptatem earum ducimus fuga, tempora animi
-            recusandae totam qui!
+            I’m passionate about problem-solving and love creating efficient,
+            user-friendly applications. When I’m not coding, I enjoy getting
+            crafty, playing board games, or relaxing with a good game like
+            Stardew Valley or The Legend of Zelda. I’m eager to continue
+            learning, growing, and collaborating on exciting projects!
           </p>
         </div>
       </div>
