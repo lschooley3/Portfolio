@@ -1,6 +1,8 @@
+import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import Accordion from 'react-bootstrap/Accordion';
 
 export const Portfolio = () => {
   const projects = [
@@ -11,7 +13,7 @@ export const Portfolio = () => {
                 this project helps users connect and organize board game
                 meetups, making it easy to find new players and enjoy your
                 favorite games.
-                <br></br>
+                
                 I took the lead on the front-end development, focusing on
                 creating an intuitive user experience and clean, responsive
                 design. Using modern web technologies, I aimed to make the app
@@ -27,7 +29,6 @@ export const Portfolio = () => {
                 create their own vehicle if their desired vehicle isn't
                 available.
               
-              <br></br>
                 The application features unique capabilities: motorcycles can
                 perform wheelies, and trucks can tow other vehicles, adding an
                 extra layer of interactivity and fun for the user.`,
@@ -42,8 +43,6 @@ export const Portfolio = () => {
                 of their workload. The intuitive interface enables users to sort
                 and group tasks, making it simple to identify and focus on
                 high-priority items.
-            
-              <br></br>
               
                 This project was the first application Laura built entirely from
                 scratch as part of a group project during her KU coding
@@ -65,8 +64,6 @@ export const Portfolio = () => {
                 by creating reactions to thoughts and have the flexibility to
                 delete these reactions as needed.
               
-              <br></br>
-              
                 This project demonstrates Laura's expertise in backend
                 development and API design, focusing on efficient data handling
                 and clear, organized endpoints. Developed during her KU
@@ -79,26 +76,33 @@ export const Portfolio = () => {
 
   return (
     <div>
-      <h1>Portfolio</h1>
-      <Row xs={1} md={2} className="g-4">
-        {projects.map((project, idx) => (
-          <Col key={idx}>
-            <Card>
-              <Card.Img
-                variant="top"
-                src={project.image}
-                alt={`${project.title} image`}
-              />
-              <Card.Body>
-                <Card.Title>{project.title}</Card.Title>
-                <Card.Text>{project.description}</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-    </div>
-  );
+    <h1>Portfolio</h1>
+    <Row xs={1} md={2} lg={2} className="g-4 d-flex justify-content-center">
+      {projects.map((project, idx) => (
+        <Col key={idx}>
+          <Card className="p-3 h-100">
+            <Card.Img
+              variant="top"
+              src={project.image}
+              alt={`${project.title} image`}
+            />
+            <Card.Body>
+              <Card.Title>{project.title}</Card.Title>
+              <Accordion defaultActiveKey="0" flush>
+                <Accordion.Item eventKey="0">
+                  <Accordion.Header>{project.title}</Accordion.Header>
+                  <Accordion.Body>
+                    <Card.Text>{project.description}</Card.Text>
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
+            </Card.Body>
+          </Card>
+        </Col>
+      ))}
+    </Row>
+  </div>
+);
 };
 
 export default Portfolio;

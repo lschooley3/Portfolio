@@ -289,6 +289,42 @@ main {
     justify-content:center;
   };
 }
-/* TODO: add media query for a max-width of 980px */
 
-/* TODO: add media query for a max-width of 768px */
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  border-radius: 10px;
+  max-width: 30rem;
+  padding: 3rem;
+  margin: 1rem;
+}
+
+.card h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.card p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.card-img-top {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
