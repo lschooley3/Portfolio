@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import Resume from "../assets/Resume.pdf";
 
 function Navigation() {
   return (
@@ -15,15 +16,19 @@ function Navigation() {
               <Link to="/contact">Contact Me</Link>
             </Nav.Link>
             <Nav.Link>
-              <Link to="/resume">Resume</Link>
+              <a href={Resume} download="Laura-Schooley-Resume.pdf">
+                Download Resume
+              </a>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
     </Navbar>
 
     <div className="hero-banner">
-      <h2 className="display-1"> Laura Schooley</h2>
+      <div>
+        <h2 className="display-1"> Laura Schooley</h2>
       <p> Explore my projects and learn more about me!</p>
+      </div>
     </div>
     </>
   );

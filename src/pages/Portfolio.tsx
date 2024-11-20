@@ -6,7 +6,6 @@ import Meeple from '../assets/alexander-lyashkov-meeple.jpg';
 import CLI from '../assets/ilya-pavlov-CLI.jpg';
 import Squeegee from '../assets/glenn-carstens-peters-squeegee.jpg';
 import API from '../assets/chris-ried-API.jpg';
-import { Placeholder } from 'react-bootstrap';
 
 export const Portfolio = () => {
   const projects = [
@@ -23,7 +22,7 @@ export const Portfolio = () => {
                 design. Using modern web technologies, I aimed to make the app
                 both functional and visually appealing, ensuring a smooth
                 experience across different devices.`,
-      image: {Meeple} || Placeholder,
+      image: {Meeple},
     },
     {
       title: "CLI Vehicle Application",
@@ -36,7 +35,7 @@ export const Portfolio = () => {
                 The application features unique capabilities: motorcycles can
                 perform wheelies, and trucks can tow other vehicles, adding an
                 extra layer of interactivity and fun for the user.`,
-      image: {CLI} || Placeholder,
+      image: {CLI},
     },
     {
       title: "The Squeegee Board",
@@ -55,7 +54,7 @@ export const Portfolio = () => {
                 The Squeegee Board project highlights Laura's proficiency in
                 creating user-centric applications that address practical needs
                 in task management.`,
-      image: {Squeegee} || Placeholder,
+      image: {Squeegee},
     },
     {
       title: "Social Network API",
@@ -74,7 +73,7 @@ export const Portfolio = () => {
                 bootcamp, it highlights her ability to implement complex
                 relationships and CRUD functionalities, laying the groundwork
                 for a scalable and user-friendly social networking platform.`,
-      image: {API} || Placeholder,
+      image: {API},
     },
   ];
 

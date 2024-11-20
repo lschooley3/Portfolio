@@ -176,6 +176,14 @@ main {
   justify-content: center;
 }
 
+.card-style {
+  border: 5px solid var(--tertiary);
+  background-color: var(--secondary);
+  background-size: 100%;
+  background-position: center;
+  color: var(--tertiary);
+}
+
 .flex-item {
   border: 5px solid var(--secondary);
   background-color: var(--primary);
