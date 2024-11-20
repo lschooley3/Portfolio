@@ -22,7 +22,9 @@ export const Portfolio = () => {
                 design. Using modern web technologies, I aimed to make the app
                 both functional and visually appealing, ensuring a smooth
                 experience across different devices.`,
-      image: {Meeple},
+      image: Meeple,
+      repo: "https://github.com/fluviangumbo/Board-Game-Night",
+      deployed: "https://hatching-meeples.herokuapp.com/",
     },
     {
       title: "CLI Vehicle Application",
@@ -35,7 +37,8 @@ export const Portfolio = () => {
                 The application features unique capabilities: motorcycles can
                 perform wheelies, and trucks can tow other vehicles, adding an
                 extra layer of interactivity and fun for the user.`,
-      image: {CLI},
+      image: CLI,
+      repo: "https://github.com/lschooley3/08vehicle",
     },
     {
       title: "The Squeegee Board",
@@ -54,7 +57,8 @@ export const Portfolio = () => {
                 The Squeegee Board project highlights Laura's proficiency in
                 creating user-centric applications that address practical needs
                 in task management.`,
-      image: {Squeegee},
+      image: Squeegee,
+      repo: "https://github.com/JasonBusenitz/task-tracker",
     },
     {
       title: "Social Network API",
@@ -73,17 +77,18 @@ export const Portfolio = () => {
                 bootcamp, it highlights her ability to implement complex
                 relationships and CRUD functionalities, laying the groundwork
                 for a scalable and user-friendly social networking platform.`,
-      image: {API},
+      image: API,
+      repo: "https://github.com/lschooley3/17SocialNetworkAPI"
     },
   ];
 
   return (
     <>
     <h1>Portfolio</h1>
-    <Row>
+    <div style={{display:'flex', flexWrap:'wrap'}}>
       {projects.map((project, idx) => (
-        <Col key={idx} sm={6}>
-          <Card className="card-style">
+        /*<Col key={idx} sm={6}> */
+          <Card key={idx} className="card-style">
             <Card.Img
               variant="top"
               src={project.image}
@@ -96,9 +101,10 @@ export const Portfolio = () => {
 
             </Card.Body>
           </Card>
-        </Col>
+
+        /* </Col> */
       ))}
-    </Row>
+    </div>
   </>
 );
 };
