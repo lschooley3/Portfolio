@@ -70,20 +70,23 @@ header h1 {
 nav {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1rem;
 }
 
 nav a {
   text-decoration: none;
   padding: 5px 10px;
   color: var(--secondary);
-  margin-right: 10px;
+  /* margin-right: 10px; */
   background-image: linear-gradient(270deg, var(--secondary) 0%, var(--secondary) 100%);
   background-repeat: no-repeat;
   background-size: 100% 0.2em;
   background-position: bottom;
   transition: all 0.25s ease-in;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 nav a:hover {
@@ -102,7 +105,7 @@ main {
 
 .hero-banner {
   background: rgb(68, 88, 120);
-  background-image: url("../images/02-hero-bg.jpg"), linear-gradient(180deg, var(--secondary) 0%, var(--primary) 100%);
+  background-image: url("./assets/benjamin-lehman-banner.jpg"), linear-gradient(180deg, var(--secondary) 0%, var(--primary) 100%);
   background-size: cover;
   background-position: center;
   background-blend-mode: soft-light;
@@ -127,6 +130,11 @@ main {
   font-size: 2.3rem;
   line-height: 1.2;
   display: inline;
+  margin-bottom: 15px;
+}
+
+.hero-banner p {
+  font-size: 1.25rem;
 }
 
 .page-wrapper {
@@ -175,39 +183,58 @@ main {
   background-position: center;
   color: var(--tertiary);
   min-height: 150px;
-  max-height: 150px;
   flex-basis: calc(50% - 1em);
   display: flex;
   align-items: flex-end;
-  padding: 0 0 20px 0;
+  padding: 20px 0 20px 0;
   margin: 0.5em;
   text-decoration: none;
   background-blend-mode: soft-light;
   background-size: 150%;
   transition: all 0.5s;
   font-size: 0.9rem;
+
 }
 
 /* feature first portfolio item */
 .flex-item:first-child {
     min-height: 400px;
-    flex-basis: 100%;
+    flex-basis: 50%;
     background-image: url("./annie-spratt-LGhYJSLtDpM-unsplash.jpg");
     background-size: fill; /*Why does this not adjust properly??? */
+    background-position: center;
+    background-blend-mode: soft-light;
+    background-size: 150%;
+    
 }
 .flex-item:nth-child(2) {
-  background-image: url("./annie-spratt-LGhYJSLtDpM-unsplash.jpg");
+  justify-content: center;
 }
-.flex-item:nth-child(3) {
-  background-image: url("./annie-spratt-LGhYJSLtDpM-unsplash.jpg");
+
+#about-me-image {
+  border-radius: 50%;
+  max-width: 50% ;
+  max-height: 50%;
+}
+.flex-item:nth-child(2) div {
+  background-color: var(--secondary);
+  padding: 8px 10px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 0 1rem;
+  font-size: 1.6rem;
+  color: var(--tertiary);
+  background-blend-mode: soft-light;
+  transition: all 0.5s;
 
 }
-.flex-item:nth-child(4) {
-  background-image: url("./annie-spratt-LGhYJSLtDpM-unsplash.jpg");
+
+.about-me-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
-.flex-item:nth-child(5) {
-  background-image: url("./annie-spratt-LGhYJSLtDpM-unsplash.jpg");  
-}
+
 .flex-item:hover {
   background-color: rgba(0, 0, 0, 0.3);
 }
@@ -282,11 +309,14 @@ main {
     font-size: 15vw;
   }
   nav a {
-    flex: 0 0 20%;
+    /* flex: 0 0 20%; */
+    font-size:1.1rem;
+    width:100%;
   }
   nav {
-    flex-direction: row;
-    justify-content:center;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
   };
 }
 
@@ -327,4 +357,55 @@ h1 {
   font-size: 4rem;
   margin-bottom: 1rem;
   text-align: center;
+}
+
+div {
+  justify-content: center;
+}
+
+div.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.form-group-A {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-radius: 0px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  background-color: var(--tertiary);
 }

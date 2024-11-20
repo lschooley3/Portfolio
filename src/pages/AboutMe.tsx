@@ -1,3 +1,5 @@
+import Me from "../assets/Me.jpg";
+
 export const AboutMe = () => {
   return (
     <div className="container">
@@ -6,11 +8,12 @@ export const AboutMe = () => {
         <small className="text-muted"> - Laura Schooley</small>
       </h1>
 
-      <div className="flex-container">
+      <div className="flex-item about-me-container">
         <img
-          src="https://via.placeholder.com/150"
+          src={Me}
           alt="placeholder"
           className="flex-item"
+          id="about-me-image"
         />
         <div className="flex-item container">
           <p className="mb-2">
@@ -20,9 +23,10 @@ export const AboutMe = () => {
             coding bootcamp through the University of Kansas, where I’ve been
             building my skills in Node.js, TypeScript, PostgreSQL, GraphQL, and
             basic Python over the past 6 months.
-          </p>
-
-          <p>
+          
+<br></br>
+<br></br>
+          
             I’m passionate about problem-solving and love creating efficient,
             user-friendly applications. When I’m not coding, I enjoy getting
             crafty, playing board games, or relaxing with a good game like

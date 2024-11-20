@@ -1,8 +1,12 @@
-import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import Accordion from 'react-bootstrap/Accordion';
+
+import Meeple from '../assets/alexander-lyashkov-meeple.jpg';
+import CLI from '../assets/ilya-pavlov-CLI.jpg';
+import Squeegee from '../assets/glenn-carstens-peters-squeegee.jpg';
+import API from '../assets/chris-ried-API.jpg';
+import { Placeholder } from 'react-bootstrap';
 
 export const Portfolio = () => {
   const projects = [
@@ -19,7 +23,7 @@ export const Portfolio = () => {
                 design. Using modern web technologies, I aimed to make the app
                 both functional and visually appealing, ensuring a smooth
                 experience across different devices.`,
-      image: "https://via.placeholder.com/300x200?text=Hatching+Meeples",
+      image: {Meeple} || Placeholder,
     },
     {
       title: "CLI Vehicle Application",
@@ -32,7 +36,7 @@ export const Portfolio = () => {
                 The application features unique capabilities: motorcycles can
                 perform wheelies, and trucks can tow other vehicles, adding an
                 extra layer of interactivity and fun for the user.`,
-      image: "https://via.placeholder.com/300x200?text=CLI+Vehicle+App",
+      image: {CLI} || Placeholder,
     },
     {
       title: "The Squeegee Board",
@@ -51,7 +55,7 @@ export const Portfolio = () => {
                 The Squeegee Board project highlights Laura's proficiency in
                 creating user-centric applications that address practical needs
                 in task management.`,
-      image: "https://via.placeholder.com/300x200?text=Squeegee+Board",
+      image: {Squeegee} || Placeholder,
     },
     {
       title: "Social Network API",
@@ -70,17 +74,17 @@ export const Portfolio = () => {
                 bootcamp, it highlights her ability to implement complex
                 relationships and CRUD functionalities, laying the groundwork
                 for a scalable and user-friendly social networking platform.`,
-      image: "https://via.placeholder.com/300x200?text=Social+Network+API",
+      image: {API} || Placeholder,
     },
   ];
 
   return (
-    <div>
+    <>
     <h1>Portfolio</h1>
-    <Row xs={1} md={2} lg={2} className="g-4 d-flex justify-content-center">
+    <Row>
       {projects.map((project, idx) => (
-        <Col key={idx}>
-          <Card className="p-3 h-100">
+        <Col key={idx} sm={6}>
+          <Card className="card-style">
             <Card.Img
               variant="top"
               src={project.image}
@@ -88,20 +92,15 @@ export const Portfolio = () => {
             />
             <Card.Body>
               <Card.Title>{project.title}</Card.Title>
-              <Accordion defaultActiveKey="0" flush>
-                <Accordion.Item eventKey="0">
-                  <Accordion.Header>{project.title}</Accordion.Header>
-                  <Accordion.Body>
+
                     <Card.Text>{project.description}</Card.Text>
-                  </Accordion.Body>
-                </Accordion.Item>
-              </Accordion>
+
             </Card.Body>
           </Card>
         </Col>
       ))}
     </Row>
-  </div>
+  </>
 );
 };
 
