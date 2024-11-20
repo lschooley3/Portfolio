@@ -7,7 +7,7 @@ import App from "./App.tsx";
 import { AboutMe } from "./pages/AboutMe.tsx";
 import { Contact } from "./pages/Contact.tsx";
 import { Portfolio } from "./pages/Portfolio.tsx";
-import { Resume } from "./pages/Resume.tsx";
+// import { Resume } from "./pages/Resume.tsx";
 import ErrorPage from "./pages/ErrorPage.tsx";
 
 const router = createBrowserRouter([
@@ -28,10 +28,10 @@ const router = createBrowserRouter([
         path: "/portfolio",
         element: <Portfolio />,
       },
-      {
-        path: "/resume",
-        element: <Resume />,
-      },
+      // {
+      //   path: "/resume",
+      //   element: <Resume />,
+      // },
     ],
   },
 ]);
