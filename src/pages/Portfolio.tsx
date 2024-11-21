@@ -1,11 +1,10 @@
 import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-
+// import { Accordion } from 'react-bootstrap';
 import Meeple from '../assets/alexander-lyashkov-meeple.jpg';
 import CLI from '../assets/ilya-pavlov-CLI.jpg';
 import Squeegee from '../assets/glenn-carstens-peters-squeegee.jpg';
 import API from '../assets/chris-ried-API.jpg';
+// import { FaGithub } from "react-icons/fa";
 
 export const Portfolio = () => {
   const projects = [
@@ -25,6 +24,7 @@ export const Portfolio = () => {
       image: Meeple,
       repo: "https://github.com/fluviangumbo/Board-Game-Night",
       deployed: "https://hatching-meeples.herokuapp.com/",
+      index: 0,
     },
     {
       title: "CLI Vehicle Application",
@@ -39,6 +39,8 @@ export const Portfolio = () => {
                 extra layer of interactivity and fun for the user.`,
       image: CLI,
       repo: "https://github.com/lschooley3/08vehicle",
+      deployed: "",
+      index: 1,
     },
     {
       title: "The Squeegee Board",
@@ -59,6 +61,8 @@ export const Portfolio = () => {
                 in task management.`,
       image: Squeegee,
       repo: "https://github.com/JasonBusenitz/task-tracker",
+      deployed: "https://squeegee-board.herokuapp.com/",
+      index: 2,
     },
     {
       title: "Social Network API",
@@ -78,7 +82,9 @@ export const Portfolio = () => {
                 relationships and CRUD functionalities, laying the groundwork
                 for a scalable and user-friendly social networking platform.`,
       image: API,
-      repo: "https://github.com/lschooley3/17SocialNetworkAPI"
+      repo: "https://github.com/lschooley3/17SocialNetworkAPI",
+      deployed: "",
+      index: 3,
     },
   ];
 
@@ -95,7 +101,7 @@ export const Portfolio = () => {
               alt={`${project.title} image`}
             />
             <Card.Body>
-              <Card.Title>{project.title}</Card.Title>
+              <Card.Title>{project.title} <a></a> <a></a></Card.Title>
 
                     <Card.Text>{project.description}</Card.Text>
 

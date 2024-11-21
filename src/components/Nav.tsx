@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-// import Resume from "../assets/Resume.pdf";
+import Resume from "../assets/Resume.pdf";
 
 function Navigation() {
   return (
@@ -15,10 +15,8 @@ function Navigation() {
             <Nav.Link>
               <Link to="/contact">Contact Me</Link>
             </Nav.Link>
-            <Nav.Link>
-              <a href="../assets/Resume.pdf" download>
+            <Nav.Link href={Resume} download="SchooleyResume">
                 Download Resume
-              </a>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
