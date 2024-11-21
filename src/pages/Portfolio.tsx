@@ -1,10 +1,10 @@
-import Card from 'react-bootstrap/Card';
+import Card from "react-bootstrap/Card";
 // import { Accordion } from 'react-bootstrap';
-import Meeple from '../assets/alexander-lyashkov-meeple.jpg';
-import CLI from '../assets/ilya-pavlov-CLI.jpg';
-import Squeegee from '../assets/glenn-carstens-peters-squeegee.jpg';
-import API from '../assets/chris-ried-API.jpg';
-// import { FaGithub } from "react-icons/fa";
+import Meeple from "../assets/alexander-lyashkov-meeple.jpg";
+import CLI from "../assets/ilya-pavlov-CLI.jpg";
+import Squeegee from "../assets/glenn-carstens-peters-squeegee.jpg";
+import API from "../assets/chris-ried-API.jpg";
+import { FaGithub } from "react-icons/fa";
 
 export const Portfolio = () => {
   const projects = [
@@ -90,10 +90,10 @@ export const Portfolio = () => {
 
   return (
     <>
-    <h1>Portfolio</h1>
-    <div style={{display:'flex', flexWrap:'wrap'}}>
-      {projects.map((project, idx) => (
-        /*<Col key={idx} sm={6}> */
+      <h1>Portfolio</h1>
+      <div style={{ display: "flex", flexWrap: "wrap" }}>
+        {projects.map((project, idx) => (
+          /*<Col key={idx} sm={6}> */
           <Card key={idx} className="card-style">
             <Card.Img
               variant="top"
@@ -101,19 +101,32 @@ export const Portfolio = () => {
               alt={`${project.title} image`}
             />
             <Card.Body>
-              <Card.Title>{project.title} <a></a> <a></a></Card.Title>
+              <Card.Title>
+                {project.deployed ? (
+                  <a
+                    href={project.deployed}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    {project.title}
+                  </a>
+                ) : (
+                  project.title
+                )}
+                <a href={project.repo}
+                target="_blank" rel="noopener noreferrer" style={{marginLeft:"10px", color:"inherit"}} aria-label="GitHub Repository"><FaGithub /></a>
+              </Card.Title>
 
-                    <Card.Text>{project.description}</Card.Text>
-
+              <Card.Text>{project.description}</Card.Text>
             </Card.Body>
           </Card>
 
-        /* </Col> */
-      ))}
-    </div>
-  </>
-);
+          /* </Col> */
+        ))}
+      </div>
+    </>
+  );
 };
 
 export default Portfolio;
-
