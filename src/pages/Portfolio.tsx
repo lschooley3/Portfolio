@@ -1,10 +1,10 @@
 import Card from "react-bootstrap/Card";
-// import { Accordion } from 'react-bootstrap';
 import Meeple from "../assets/alexander-lyashkov-meeple.jpg";
 import CLI from "../assets/ilya-pavlov-CLI.jpg";
 import Squeegee from "../assets/glenn-carstens-peters-squeegee.jpg";
 import API from "../assets/chris-ried-API.jpg";
 import { FaGithub } from "react-icons/fa";
+import { Accordion } from "react-bootstrap";
 
 export const Portfolio = () => {
   const projects = [
@@ -114,15 +114,25 @@ export const Portfolio = () => {
                 ) : (
                   project.title
                 )}
-                <a href={project.repo}
-                target="_blank" rel="noopener noreferrer" style={{marginLeft:"10px", color:"inherit"}} aria-label="GitHub Repository"><FaGithub /></a>
+                <a
+                  href={project.repo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ marginLeft: "10px", color: "inherit" }}
+                  aria-label="GitHub Repository"
+                >
+                  <FaGithub />
+                </a>
               </Card.Title>
-
-              <Card.Text>{project.description}</Card.Text>
+                <Accordion>
+                  <Accordion.Item eventKey={`${idx}`}>
+                    <Accordion.Header>Description</Accordion.Header>
+                    <Accordion.Body>{project.description}</Accordion.Body>
+                  </Accordion.Item>
+                </Accordion>
             </Card.Body>
           </Card>
 
-          /* </Col> */
         ))}
       </div>
     </>
