@@ -67,7 +67,7 @@ header h1 {
   line-height: 1;
 }
 
-nav {
+.nav {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -76,7 +76,7 @@ nav {
   gap: 1rem;
 }
 
-nav a {
+.nav-a {
   text-decoration: none;
   padding: 5px 10px;
   color: var(--secondary);
@@ -89,15 +89,19 @@ nav a {
   font-size: 1.2rem;
 }
 
-nav a:hover {
+.nav-a:hover {
   background-size: 100% 100%;
   color: var(--primary);
 }
 
-nav a:last-child {
+.nav-a:last-child {
   margin-right: 0;
 }
 
+.link {
+  text-decoration: none;
+  color: var(--tertiary);
+}
 main {
   margin-top: 20px;
   margin-bottom: 45px;
@@ -184,8 +188,8 @@ main {
   color: var(--tertiary);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   border-radius: 10px;
-  padding: 3rem;
-  margin: 1rem;
+  padding: 1rem;
+  margin: 0.75rem;
   flex-basis: 50%;
   flex: 1;
 }
@@ -290,50 +294,6 @@ main {
   color: var(--secondary);
 }
 
-/* portfolio project images */
-/* TODO: Add portfolio project images here*/
-
-/* media queries */
-@media only screen and (max-width: 980px) {
-
-}
-@media only screen and (max-width:768px){
-  .flex-container {
-    flex-direction: column;
-  }
-  .page-section > h2 {
-    text-align: center;
-    border-bottom: 4px solid var(--primary);
-    font-size: 10vw;
-    border-right: 0px;
-  }
-  .page-section {
-    flex-direction: column;
-  }
-  .flex-item:first-child {
-    min-height: 150px;
-  }
-  .hero-banner {
-    min-height: auto;
-  }
-  header {
-    flex-direction: column;
-  }
-  header h1 {
-    font-size: 15vw;
-  }
-  nav a {
-    /* flex: 0 0 20%; */
-    font-size:1.1rem;
-    width:100%;
-  }
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    flex-wrap: wrap;
-  };
-}
-
 
 .card h2 {
   font-size: 2rem;
@@ -403,5 +363,44 @@ form {
   flex-direction: row;
   justify-content: right;
   align-items: center;
-  background-color: var(--tertiary);
+  background-color: var(--tertiary)!important;
+}
+
+
+
+@media only screen and (max-width:768px){
+  .flex-container {
+    flex-direction: column;
+  }
+  .page-section > h2 {
+    text-align: center;
+    border-bottom: 4px solid var(--primary);
+    font-size: 10vw;
+    border-right: 0px;
+  }
+  .page-section {
+    flex-direction: column;
+  }
+  .flex-item:first-child {
+    min-height: 150px;
+  }
+  .hero-banner {
+    min-height: auto;
+  }
+  header {
+    flex-direction: column;
+  }
+  header h1 {
+    font-size: 15vw;
+  }
+  nav a {
+    /* flex: 0 0 20%; */
+    font-size:1.1rem;
+    width:100%;
+  }
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  };
 }

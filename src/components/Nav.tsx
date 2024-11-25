@@ -8,15 +8,15 @@ function Navigation() {
     <>
     <Navbar expand="lg" className="bg-body-tertiary">
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link><Link to="/">About Me</Link></Nav.Link>
-            <Nav.Link><Link to="/portfolio">Portfolio</Link></Nav.Link>
+          <Nav className="me-auto nav">
+            <Nav.Link className="nav-a"><Link to="/">About Me</Link></Nav.Link>
+            <Nav.Link className="nav-a"><Link to="/portfolio">Portfolio</Link></Nav.Link>
             
-            <Nav.Link>
+            <Nav.Link className="nav-a">
               <Link to="/contact">Contact Me</Link>
             </Nav.Link>
-            <Nav.Link href={Resume} download="SchooleyResume">
-                Download Resume
+            <Nav.Link className="nav-a link">
+                <Link to={Resume} target ="_blank" download="SchooleyResume">Download Resume</Link>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
